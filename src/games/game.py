@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from enum import StrEnum
+from uuid import uuid4
 
 
 class GamePlatform(StrEnum):
@@ -27,6 +28,7 @@ class Game:
     title: str
     platform: GamePlatform
     source_url: str
+    id: str = field(default=str(uuid4()))
     sub_title: str = field(default=None)
     developer: str = field(default=None)
     thumbnail_image_url: str = field(default=None)

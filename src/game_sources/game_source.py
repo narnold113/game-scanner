@@ -1,17 +1,17 @@
 from abc import ABC, abstractmethod
+from dataclasses import dataclass, field
 
-from game import Game
+from games.game import Game
 
 
+@dataclass
 class GameSource(ABC):
-    def __init__(self, url) -> None:
-        self.url = url
-        self.games = []
+    games: list[Game] = field(default_factory=list)
+
+    # @abstractmethod
+    # def get_html(self):
+    #     pass
 
     @abstractmethod
-    def get_html(self):
-        pass
-
-    @abstractmethod
-    def extract_games(self) -> list[Game]:
+    def load_games(self) -> None:
         pass
