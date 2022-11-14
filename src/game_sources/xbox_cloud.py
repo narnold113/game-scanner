@@ -1,5 +1,6 @@
 import json
 from dataclasses import dataclass
+from uuid import uuid4
 
 import requests
 from bs4 import BeautifulSoup
@@ -41,8 +42,12 @@ class XboxCloud(GameSource):
         for game in game_dict["xcloud"]["products"]["data"]:
             self.games.append(
                 Game(
-                    game_dict["xcloud"]["products"]["data"][game]["data"]["title"],
-                    GamePlatform.XBOX_CLOUD.value,
-                    self.url,
+                    title=game_dict["xcloud"]["products"]["data"][game]["data"]["title"],
+                    sub_title=None,
+                    platform=GamePlatform.XBOX_CLOUD,
+                    source_url=self.url,
+                    id=str(uuid4()),
+                    developer=None,
+                    thumbnail_image_url=None,
                 )
             )

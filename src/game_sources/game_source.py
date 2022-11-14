@@ -7,10 +7,7 @@ from games.game import Game
 @dataclass
 class GameSource(ABC):
     games: list[Game] = field(default_factory=list)
-
-    # @abstractmethod
-    # def get_html(self):
-    #     pass
+    url: str = field(default=None)
 
     @abstractmethod
     def load_games(self) -> None:

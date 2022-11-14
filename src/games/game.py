@@ -8,17 +8,18 @@ class GamePlatform(StrEnum):
     XBOX_CONSOLE = "XBOX Console"
     XBOX_PC = "XBOX PC"
 
-    LUNA_PLUS = "Luna+"
-    LUNA_FAMILY = "Luna Family"
-    LUNA_RETRO = "Luna Retro"
-    LUNA_UBISOFT_PLUS = "Luna Ubisoft+"
-    LUNA_PRIME_GAMING = "Luna Prime Gaming"
-    LUNA_JACKBOX = "Luna Jackbox"
+    AMAZON_LUNA_PLUS = "Amazon Luna+"
+    AMAZON_LUNA_FAMILY = "Amazon Luna Family"
+    AMAZON_LUNA_RETRO = "Amazon Luna Retro"
+    AMAZON_LUNA_UBISOFT_PLUS = "Amazon Luna Ubisoft+"
+    AMAZON_LUNA_PRIME_GAMING = "Amazon Luna Prime Gaming"
+    AMAZON_LUNA_JACKBOX = "Amazon Luna Jackbox"
 
     PSNOW_PREMIUM = "PSNow Premium"
     PSNOW_EXTRA = "PSNow Extra"
+    PS_PLUS = "PS Plus"
 
-    NVIDIA = "Nvidia"
+    NVIDIA_GFN = "Nvidia GeForce Now"
 
     BOOSTEROID = "Boosteroid"
 
