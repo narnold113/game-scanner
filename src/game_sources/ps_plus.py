@@ -1,6 +1,4 @@
-import json
 from dataclasses import dataclass
-from uuid import uuid4
 
 import requests
 from bs4 import BeautifulSoup
@@ -38,7 +36,6 @@ class PsPlus(GameSource):
                         sub_title=None,
                         platform=GamePlatform.PS_PLUS,
                         source_url=self.url,
-                        id=str(uuid4()),
                         developer=None,
                         thumbnail_image_url=None,
                     )

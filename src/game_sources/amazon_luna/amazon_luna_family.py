@@ -1,6 +1,5 @@
 import json
 from dataclasses import dataclass
-from uuid import uuid4
 
 import requests
 
@@ -41,7 +40,6 @@ class AmazonLunaFamily(AmazonLunaGameSource):
                                 sub_title=None,
                                 platform=GamePlatform.AMAZON_LUNA_FAMILY,
                                 source_url=self.url,
-                                id=str(uuid4()),
                                 developer=None,
                                 thumbnail_image_url=str(game_info["imageLandscape"]),
                             )

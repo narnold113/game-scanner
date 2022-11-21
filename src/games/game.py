@@ -29,7 +29,6 @@ class Game:
     title: str
     platform: GamePlatform
     source_url: str
-    id: str = field(default=str(uuid4()))
     sub_title: str = field(default=None)
     developer: str = field(default=None)
     thumbnail_image_url: str = field(default=None)

@@ -1,7 +1,6 @@
 # import json
 import json
 from dataclasses import dataclass
-from uuid import uuid4
 
 import requests
 
@@ -31,7 +30,6 @@ class NvidiaGfn(GameSource):
                     platform=GamePlatform.NVIDIA_GFN,
                     source_url=self.url,
                     developer=item["launcher"],
-                    id=str(uuid4()),
                     thumbnail_image_url=item["imageUrl"],
                 )
             )
