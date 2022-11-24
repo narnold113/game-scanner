@@ -22,11 +22,11 @@ class GameSourcesAgg:
             for game in game_source.games:
                 self.games.append(game)
 
-    def build_game_data_frame(self):
+    def build_games_data_frame(self):
         if not self.games:
             print("No games...")
 
-        game_df = pd.DataFrame(
+        games_df = pd.DataFrame(
             columns=[
                 "title",
                 "sub_title",
@@ -39,11 +39,12 @@ class GameSourcesAgg:
         )
 
         for game in self.games:
-            print(game.__dict__)
-            new_row = pd.Series(game.__dict__)
-            pd.concat(
-                [game_df, new_row.to_frame().T],
+            game_dict = game.__dict__
+            game_dict["platform"] = game.platform.value
+            new_row = pd.Series(game_dict)
+            games_df = pd.concat(
+                [games_df, new_row.to_frame().T],
                 ignore_index=True,
             )
 
-        return game_df
+        return games_df

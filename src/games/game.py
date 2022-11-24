@@ -1,9 +1,8 @@
 from dataclasses import dataclass, field
-from enum import StrEnum
-from uuid import uuid4
+from enum import Enum
 
 
-class GamePlatform(StrEnum):
+class GamePlatform(Enum):
     XBOX_CLOUD = "XBOX Cloud"
     XBOX_CONSOLE = "XBOX Console"
     XBOX_PC = "XBOX PC"
