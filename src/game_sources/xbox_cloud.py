@@ -29,9 +29,6 @@ class XboxCloud(GameSource):
                 if len(script_text) > 1000:
                     script_text = script_text.split("STATE__ = ")[1].strip()
                     script_text = script_text.split("window.env = ")[0].strip().replace(";", "")
-                    # with open("game.txt", "w") as f:
-                    #     f.write(script_text)
-                    # print(script_text)
                     game_dict = json.loads(script_text)
 
         if not game_dict:
